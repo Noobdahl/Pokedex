@@ -134,3 +134,22 @@ void EvolvePokemon(int userInputInt)
     currentPokemon.Evolve();
     Console.WriteLine($"{oldName} evolved into: {currentPokemon.GetName()}");
 }
+
+
+int indexCounter = 0;
+int indexToRemove = 0;
+int input = 1;
+foreach(Pokemon pokemon in pokedex)
+{
+    if(input == pokedex.GetNumberOchSåVidare())
+    {
+        indexToRemove = indexCounter;
+    }
+    indexCounter++;
+}
+
+pokedex.Remove(pokedex[indexToRemove]);
+
+int userInput = Convert.ToInt32(Console.ReadLine()) - 1;
+
+pokedex.Remove(pokedex[userInput-1]);
